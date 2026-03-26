@@ -3,9 +3,14 @@ import { NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isPublicAdminAsset = pathname === "/admin/riot.txt";
 
-  // Only protect /admin routes (except /admin/login)
-  if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
+  // Protect /admin routes, but keep the login page and Riot verification file public.
+  if (
+    pathname.startsWith("/admin") &&
+    pathname !== "/admin/login" &&
+    !isPublicAdminAsset
+  ) {
     const token = request.cookies.get("admin_session")?.value;
 
     if (!token) {
