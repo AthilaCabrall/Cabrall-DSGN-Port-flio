@@ -9,27 +9,27 @@ const TESTIMONIALS = [
   {
     name: "Marina S.",
     role: "CEO, Boutique de Moda",
-    text: "O Athila transformou completamente a identidade visual da minha marca. As vendas aumentaram 40% no primeiro mês após o rebranding.",
+    text: "O Athila entregou a landing page do meu lançamento em poucos dias. A taxa de conversão foi 3x maior que a da página antiga.",
   },
   {
     name: "Rafael M.",
     role: "Advogado Tributarista",
-    text: "Profissional excepcional. Entregou um trabalho de altíssima qualidade que superou minhas expectativas em todos os aspectos.",
+    text: "Página rápida, profissional e que realmente captura clientes. O briefing foi simples e o resultado superou as expectativas.",
   },
   {
     name: "Camila F.",
     role: "Dermatologista",
-    text: "O design das redes sociais ficou incrível. Meus pacientes sempre elogiam a qualidade visual do meu perfil profissional.",
+    text: "Minha landing de captação ficou impecável e carrega num piscar de olhos. Hoje recebo agendamentos direto pelo site.",
   },
   {
     name: "Lucas P.",
     role: "Fundador, Tech Startup",
-    text: "A mentoria mudou minha visão sobre design estratégico. Aprendi a usar o visual como ferramenta de vendas real.",
+    text: "Velocidade absurda usando IA sem perder qualidade. Saímos do Figma para o ar funcionando em tempo recorde.",
   },
   {
     name: "Juliana R.",
     role: "Corretora de Seguros",
-    text: "Contratei para social media e nunca mais troquei. Qualidade impecável, entregas no prazo e criatividade sem igual.",
+    text: "Os templates da Cyno me destravaram e a landing que o Athila fez virou minha principal fonte de leads.",
   },
 ];
 

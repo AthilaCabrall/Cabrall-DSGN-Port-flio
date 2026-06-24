@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { LeadForm } from "@/components/forms/lead-form";
-import { WHATSAPP } from "@/lib/constants";
+import { WHATSAPP, CYNO } from "@/lib/constants";
 
 export function Contact() {
   const shouldReduceMotion = useReducedMotion();
@@ -22,11 +22,11 @@ export function Contact() {
             Contato
           </p>
           <h2 className="font-tusker text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-bone leading-[0.9]">
-            Vamos transformar{" "}
-            <span className="text-gradient">sua marca?</span>
+            Bora tirar sua ideia{" "}
+            <span className="text-gradient">do papel?</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-bone/40 max-w-2xl mx-auto font-poppins font-light">
-            Preencha o formulário ou fale diretamente comigo no WhatsApp.
+            Preencha o formulário com os detalhes do projeto ou fale direto comigo no WhatsApp.
           </p>
         </AnimatedSection>
 
@@ -103,15 +103,15 @@ export function Contact() {
                 <ExternalLink className="h-4 w-4 text-cognac shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-bone/35 mb-0.5 font-poppins uppercase tracking-wider">
-                    Portfólio
+                    Hub Cyno
                   </p>
                   <a
-                    href="https://behance.net/athilapsd"
+                    href={CYNO.hubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-cognac font-medium hover:text-cognac-light transition-colors font-poppins"
                   >
-                    behance.net/athilapsd
+                    Prompts & templates de landing page
                   </a>
                 </div>
               </div>

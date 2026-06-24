@@ -26,18 +26,21 @@ const humming = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://athilacabrall.com"),
-  title: "Athila Cabrall | Senior Visual Designer & Creative Strategist",
+  title: "Athila Cabrall | Vibe Coder & Criador de Landing Pages",
   description:
-    "Transformo a visão do seu negócio em faturamento através do Design Estratégico. +6 anos de experiência, +132 clientes atendidos. Artes de alto impacto, branding e estratégia visual.",
+    "Crio landing pages de alta conversão com vibe coding e IA — rápidas, bonitas e feitas para vender. Conheça também a Cyno, hub de prompts e templates.",
   keywords: [
-    "designer",
-    "design estratégico",
-    "branding",
-    "identidade visual",
-    "artes para redes sociais",
-    "criativos para anúncios",
-    "Goiânia",
-    "designer freelancer",
+    "vibe coder",
+    "landing page",
+    "criador de landing pages",
+    "desenvolvedor",
+    "programador",
+    "landing page de alta conversão",
+    "vibe coding",
+    "inteligência artificial",
+    "Cyno",
+    "templates de landing page",
+    "prompts",
     "Athila Cabrall",
   ],
   authors: [{ name: "Athila Cabrall" }],
@@ -46,16 +49,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://athilacabrall.com",
-    title: "Athila Cabrall | Senior Visual Designer & Creative Strategist",
+    title: "Athila Cabrall | Vibe Coder & Criador de Landing Pages",
     description:
-      "Transformo a visão do seu negócio em faturamento através do Design Estratégico. +6 anos de experiência, +132 clientes atendidos.",
+      "Landing pages de alta conversão com vibe coding e IA. Conheça também a Cyno, hub de prompts e templates de landing page.",
     siteName: "Athila Cabrall",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Athila Cabrall | Senior Visual Designer",
+    title: "Athila Cabrall | Vibe Coder & Criador de Landing Pages",
     description:
-      "Design Estratégico que transforma visão em faturamento. +132 clientes atendidos.",
+      "Landing pages que convertem, feitas com vibe coding e IA. Conheça a Cyno.",
   },
   robots: {
     index: true,
@@ -76,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR" className="dark" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#0F0F11" />
         <script
@@ -85,9 +88,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              name: "Athila Cabrall — Design Estratégico",
+              name: "Athila Cabrall — Vibe Coder & Criador de Landing Pages",
               description:
-                "Senior Visual Designer & Creative Strategist com +6 anos de experiência e +132 clientes atendidos.",
+                "Criação de landing pages de alta conversão com vibe coding e IA. Cofundador da agência Cyno.",
               url: "https://athilacabrall.com",
               areaServed: "BR",
               priceRange: "$$",
@@ -98,7 +101,7 @@ export default function RootLayout({
                 addressCountry: "BR",
               },
               sameAs: [
-                "https://behance.net/athilapsd",
+                "https://github.com/AthilaCabrall",
                 "https://instagram.com/athilacabrall",
               ],
             }),

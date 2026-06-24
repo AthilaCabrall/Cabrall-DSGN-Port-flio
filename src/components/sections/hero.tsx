@@ -5,7 +5,7 @@ import { ArrowRight, ExternalLink, ChevronDown } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CountUp } from "@/components/ui/count-up";
-import { STATS, SOCIAL } from "@/lib/constants";
+import { STATS } from "@/lib/constants";
 
 const HERO_IMAGES = [
   "/images/hero/freepik__candid-relaxed-studio-portrait-of-a-young-man-with__57261.webp",
@@ -14,7 +14,7 @@ const HERO_IMAGES = [
   "/images/hero/freepik__cozy-cinematic-portrait-of-a-young-man-with-curly-__66246.webp",
 ];
 
-const headlineWords = ["Design", "que", "Vende."];
+const headlineWords = ["Landing", "que", "Converte."];
 
 export function Hero() {
   const [heroImage, setHeroImage] = useState(HERO_IMAGES[0]);
@@ -35,7 +35,7 @@ export function Hero() {
       <div className="absolute inset-0 lg:left-1/2">
         <img
           src={heroImage}
-          alt="Athila Cabrall — Senior Visual Designer"
+          alt="Athila Cabrall — Vibe Coder & Criador de Landing Pages"
           className="h-full w-full object-cover object-center"
         />
         {/* Multi-layer gradient overlay */}
@@ -75,7 +75,7 @@ export function Hero() {
             animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Senior Visual Designer & Creative Strategist
+            Vibe Coder & Criador de Landing Pages
           </motion.p>
 
           {/* Headline — word by word */}
@@ -106,7 +106,7 @@ export function Hero() {
             animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.9 }}
           >
-            transformando visão em faturamento
+            código com vibe, páginas que vendem
           </motion.p>
 
           {/* Description */}
@@ -116,9 +116,9 @@ export function Hero() {
             animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            Artes estratégicas, branding e criativos que{" "}
-            <span className="text-bone font-medium">convertem de verdade</span>.
-            Mais que design bonito — resultados mensuráveis.
+            Landing pages rápidas, bonitas e feitas para{" "}
+            <span className="text-bone font-medium">converter de verdade</span>.
+            Vibe coding + IA para tirar sua ideia do papel em tempo recorde.
           </motion.p>
 
           {/* Stats — floating glass cards */}
@@ -154,13 +154,13 @@ export function Hero() {
           >
             <Button size="lg" className="rounded-full group" asChild>
               <a href="#contato">
-                Solicitar Orçamento
+                Quero minha landing page
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full group" asChild>
-              <a href={SOCIAL.behance} target="_blank" rel="noopener noreferrer">
-                Ver Portfólio
+              <a href="#portfolio">
+                Ver Projetos
                 <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </Button>

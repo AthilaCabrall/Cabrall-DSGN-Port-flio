@@ -58,7 +58,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
           ? "glass border-b border-border/50 shadow-2xl shadow-obsidian/60"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-obsidian via-obsidian/70 to-transparent backdrop-blur-[2px]"
       )}
     >
       <nav className="section-container flex h-16 items-center justify-between">

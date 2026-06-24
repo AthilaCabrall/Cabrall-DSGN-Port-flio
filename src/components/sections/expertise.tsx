@@ -1,6 +1,6 @@
 "use client";
 
-import { Palette, Gem, Target, Brain, type LucideIcon } from "lucide-react";
+import { Rocket, Sparkles, Target, Code, type LucideIcon } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   AnimatedSection,
@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/animated-section";
 import { SERVICES } from "@/lib/constants";
 
-const iconMap: Record<string, LucideIcon> = { Palette, Gem, Target, Brain };
+const iconMap: Record<string, LucideIcon> = { Rocket, Sparkles, Target, Code };
 
 const gridSpans = [
   "md:col-span-2 md:row-span-1",
@@ -29,12 +29,12 @@ export function Expertise() {
             Expertise
           </p>
           <h2 className="font-tusker text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-bone leading-[0.9]">
-            O que eu faço pelo{" "}
+            O que eu construo pro{" "}
             <span className="text-gradient-gold">seu negócio</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-bone/40 max-w-2xl mx-auto font-poppins font-light leading-relaxed">
-            Cada projeto é tratado como ferramenta estratégica para gerar resultados
-            — não apenas peças bonitas.
+            Cada página é pensada como uma máquina de conversão — design estratégico,
+            código rápido e IA no fluxo de trabalho.
           </p>
         </AnimatedSection>
 

@@ -1,133 +1,60 @@
 "use client";
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Send, Loader2 } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { WHATSAPP, PROJECT_TYPE_LABELS } from "@/lib/constants";
+import { FORMS } from "@/lib/constants";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Nome é obrigatório"),
-  email: z.string().email("E-mail inválido"),
-  phone: z.string().min(10, "WhatsApp inválido"),
-  projectType: z.string().min(1, "Selecione o tipo de projeto"),
-  message: z.string().optional(),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+const FORM_BENEFITS = [
+  "Conte seu projeto com calma, no seu tempo",
+  "Recebo todas as informações organizadas",
+  "Retorno com uma proposta sob medida",
+];
 
 export function LeadForm() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
-    mode: "onBlur",
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      projectType: "",
-      message: "",
-    },
-  });
-
-  const onSubmit = async (data: ContactFormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    setSubmitted(true);
-
-    const projectLabel = PROJECT_TYPE_LABELS[data.projectType] || data.projectType;
-    const whatsappUrl = WHATSAPP.buildLink(data.name, projectLabel);
-
-    setTimeout(() => {
-      reset();
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-      setSubmitted(false);
-    }, 1500);
-  };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
-        <div className="h-16 w-16 rounded-full bg-cognac/20 flex items-center justify-center">
-          <Send className="h-8 w-8 text-cognac" />
-        </div>
-        <h3 className="text-xl font-bold text-bone">Mensagem Enviada!</h3>
-        <p className="text-bone/60">Redirecionando para o WhatsApp...</p>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <div className="space-y-2">
-        <Label htmlFor="name">Nome *</Label>
-        <Input id="name" placeholder="Seu nome completo" {...register("name")} aria-invalid={!!errors.name} />
-        {errors.name && <p className="text-xs text-destructive">{errors.name.message}</p>}
+    <div className="flex flex-col h-full space-y-6">
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-cognac/10 border border-cognac/15">
+          <FileText className="h-5 w-5 text-cognac" strokeWidth={1.5} />
+        </div>
+        <div>
+          <h3 className="font-poppins font-bold text-bone text-lg">
+            Briefing do seu projeto
+          </h3>
+          <p className="text-sm text-bone/40 font-poppins font-light">
+            Leva menos de 2 minutos para preencher
+          </p>
+        </div>
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="email">E-mail *</Label>
-        <Input id="email" type="email" placeholder="seu@email.com" {...register("email")} aria-invalid={!!errors.email} />
-        {errors.email && <p className="text-xs text-destructive">{errors.email.message}</p>}
-      </div>
+      <p className="text-sm text-bone/50 font-poppins font-light leading-relaxed">
+        Quer uma landing page que realmente converte? Preencha o formulário e me
+        conte sobre seu projeto. É a forma mais rápida de eu entender o que você
+        precisa e voltar com uma proposta certeira.
+      </p>
 
-      <div className="space-y-2">
-        <Label htmlFor="phone">WhatsApp *</Label>
-        <Input id="phone" type="tel" placeholder="(62) 99999-9999" {...register("phone")} aria-invalid={!!errors.phone} />
-        {errors.phone && <p className="text-xs text-destructive">{errors.phone.message}</p>}
-      </div>
+      <ul className="space-y-3">
+        {FORM_BENEFITS.map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <CheckCircle2 className="h-4 w-4 text-cognac shrink-0 mt-0.5" />
+            <span className="text-sm text-bone/60 font-poppins font-light">
+              {item}
+            </span>
+          </li>
+        ))}
+      </ul>
 
-      <div className="space-y-2">
-        <Label htmlFor="projectType">Tipo de Projeto *</Label>
-        <select
-          id="projectType"
-          {...register("projectType")}
-          className="flex h-12 w-full rounded-lg border border-border bg-obsidian/50 px-4 py-3 text-sm text-bone transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:border-cognac appearance-none cursor-pointer"
-          aria-invalid={!!errors.projectType}
-          defaultValue=""
-        >
-          <option value="" disabled className="text-muted-foreground bg-obsidian">
-            Selecione o tipo de projeto
-          </option>
-          {Object.entries(PROJECT_TYPE_LABELS).map(([value, label]) => (
-            <option key={value} value={value} className="bg-obsidian text-bone">
-              {label}
-            </option>
-          ))}
-        </select>
-        {errors.projectType && <p className="text-xs text-destructive">{errors.projectType.message}</p>}
+      <div className="mt-auto pt-2">
+        <Button size="lg" className="w-full rounded-full group glow-cognac" asChild>
+          <a href={FORMS.contact} target="_blank" rel="noopener noreferrer">
+            Preencher o formulário
+            <ArrowUpRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </Button>
+        <p className="mt-3 text-center text-[11px] text-bone/30 font-poppins">
+          Abre em uma nova aba no Google Forms
+        </p>
       </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="message">
-          Mensagem <span className="text-bone/40">(opcional)</span>
-        </Label>
-        <Textarea id="message" placeholder="Conte um pouco sobre seu projeto..." rows={4} {...register("message")} />
-      </div>
-
-      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? (
-          <>
-            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-            Enviando...
-          </>
-        ) : (
-          <>
-            Enviar e Falar no WhatsApp
-            <Send className="ml-2 h-5 w-5" />
-          </>
-        )}
-      </Button>
-    </form>
+    </div>
   );
 }

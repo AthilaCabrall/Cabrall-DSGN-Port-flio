@@ -13,19 +13,19 @@ const ABOUT_IMAGES = [
 ];
 
 const highlights = [
-  "Visão estratégica aliada a execução impecável",
-  "Integração de inteligência artificial no fluxo criativo",
-  "Experiência com projetos complexos e multi-segmento",
-  "Foco em conversão e resultados mensuráveis",
-  "Atendimento premium e entregas dentro do prazo",
+  "Vibe coding: prototipo, codifico e publico rápido",
+  "Inteligência artificial em todo o fluxo de trabalho",
+  "Foco em conversão, performance e código limpo",
+  "Da copy ao deploy — entrego a página inteira",
+  "Cofundador da Cyno, hub criativo com meu irmão Henrique",
 ];
 
 const timeline = [
-  { year: "2019", label: "Início da jornada no Design" },
-  { year: "2020", label: "Primeiros clientes corporativos" },
-  { year: "2022", label: "+80 clientes atendidos" },
-  { year: "2024", label: "Integração IA no workflow" },
-  { year: "2025", label: "+132 clientes, mentoria" },
+  { year: "2019", label: "Início no design e na web" },
+  { year: "2021", label: "Primeiros sites e clientes" },
+  { year: "2023", label: "Foco em landing pages que convertem" },
+  { year: "2024", label: "Vibe coding com IA no fluxo" },
+  { year: "2025", label: "Lançamento da agência Cyno" },
 ];
 
 export function About() {
@@ -68,7 +68,7 @@ export function About() {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <p className="font-humming text-sm text-cognac-light leading-relaxed">
-                  &ldquo;Design é a ponte entre a visão e o resultado.&rdquo;
+                  &ldquo;Código é a ponte entre a ideia e a venda.&rdquo;
                 </p>
               </motion.div>
             </div>
@@ -81,28 +81,30 @@ export function About() {
                 Sobre
               </p>
               <h2 className="font-tusker text-3xl sm:text-4xl lg:text-5xl text-bone leading-[0.9]">
-                Design que une{" "}
-                <span className="text-gradient">tradição e inovação</span>
+                Onde design encontra{" "}
+                <span className="text-gradient">código e IA</span>
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.15}>
               <div className="space-y-4 text-bone/50 leading-relaxed border-l-2 border-cognac/30 pl-6 font-poppins font-light">
                 <p>
-                  Nos últimos <span className="text-bone font-semibold">6 anos</span>,
-                  ajudei mais de <span className="text-bone font-semibold">132 negócios</span> a
-                  transformar sua presença visual em resultados concretos.
+                  Comecei no design e fui parar no{" "}
+                  <span className="text-bone font-semibold">código</span>. Hoje sou{" "}
+                  <span className="text-bone font-semibold">vibe coder</span> — uno
+                  design estratégico, desenvolvimento e IA para criar landing pages
+                  que vendem.
                 </p>
                 <p>
-                  Minha abordagem une a solidez do design tradicional com
-                  ferramentas de ponta — incluindo{" "}
-                  <span className="text-cognac font-medium">inteligência artificial</span> como
-                  parte do fluxo criativo.
+                  Uso <span className="text-cognac font-medium">inteligência artificial</span> em
+                  todo o fluxo: do briefing ao deploy, entrego páginas rápidas e
+                  bonitas em uma fração do tempo.
                 </p>
                 <p>
-                  Cada projeto é uma oportunidade de criar algo que
-                  não apenas impressiona visualmente, mas que{" "}
-                  <span className="text-bone font-semibold">gera impacto real no faturamento</span>.
+                  Junto com meu irmão{" "}
+                  <span className="text-bone font-semibold">Henrique Bergami</span>, fundei a{" "}
+                  <span className="text-cognac font-medium">Cyno</span> — um hub criativo com
+                  prompts, templates de landing page e recursos para quem constrói na internet.
                 </p>
               </div>
             </AnimatedSection>
@@ -153,7 +155,7 @@ export function About() {
                   Athila <span className="text-cognac">Cabrall</span>
                 </p>
                 <p className="text-xs text-bone/35 font-poppins tracking-wide">
-                  Senior Visual Designer & Creative Strategist
+                  Vibe Coder & Criador de Landing Pages · Cofundador da Cyno
                 </p>
               </div>
             </AnimatedSection>

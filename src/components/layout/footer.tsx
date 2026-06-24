@@ -21,8 +21,8 @@ export function Footer() {
               </p>
             </a>
             <p className="text-sm text-bone/35 font-poppins font-light leading-relaxed max-w-xs">
-              Design Estratégico que transforma a visão do seu negócio em
-              faturamento real. +6 anos de experiência.
+              Vibe coder e criador de landing pages de alta conversão.
+              Código com vibe, páginas que vendem. Cofundador da Cyno.
             </p>
           </div>
 
@@ -34,10 +34,9 @@ export function Footer() {
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: "Início", href: "#inicio" },
-                { label: "Portfólio", href: "#portfolio" },
+                { label: "Projetos", href: "#portfolio" },
                 { label: "Sobre", href: "#sobre" },
-                { label: "Ensaios IA", href: "#ensaios-ia" },
-                { label: "Mentoria", href: "#mentoria" },
+                { label: "Cyno", href: "#cyno" },
                 { label: "Contato", href: "#contato" },
               ].map((link) => (
                 <a
@@ -57,17 +56,17 @@ export function Footer() {
               Redes Sociais
             </p>
             <div className="flex items-center gap-3">
-              {/* Behance */}
+              {/* GitHub */}
               <motion.a
-                href={SOCIAL.behance}
+                href={SOCIAL.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 rounded-full glass-card hover:border-cognac/30 transition-colors"
                 whileHover={shouldReduceMotion ? {} : { y: -2, scale: 1.05 }}
-                aria-label="Behance"
+                aria-label="GitHub"
               >
                 <svg className="w-4 h-4 text-bone/60" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </motion.a>
 
@@ -108,7 +107,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Athila Cabrall. Todos os direitos reservados.
           </p>
           <p className="text-[10px] text-bone/15 font-poppins">
-            Feito com <span className="text-cognac/40">♥</span> e estratégia
+Feito com <span className="text-cognac/40">♥</span>, código e IA
           </p>
         </div>
       </div>

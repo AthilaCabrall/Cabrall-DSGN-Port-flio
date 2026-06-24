@@ -13,7 +13,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { PORTFOLIO_PROJECTS, SOCIAL } from "@/lib/constants";
+import { PORTFOLIO_PROJECTS, CYNO } from "@/lib/constants";
 
 const PROJECT_FILES: Record<string, string[]> = {
   "projeto-1": [
@@ -171,11 +171,11 @@ export function Portfolio() {
             Portfólio
           </p>
           <h2 className="font-tusker text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-bone leading-[0.9]">
-            Trabalhos que{" "}
-            <span className="text-gradient">falam por si</span>
+            Projetos que{" "}
+            <span className="text-gradient">convertem</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-bone/40 max-w-2xl mx-auto font-poppins font-light">
-            Uma seleção dos projetos que geraram resultados reais para os clientes.
+            Uma seleção de landing pages, sites e criativos que geraram resultados reais.
           </p>
         </AnimatedSection>
 
@@ -261,8 +261,8 @@ export function Portfolio() {
 
         <AnimatedSection className="text-center mt-12 lg:mt-16">
           <Button size="lg" variant="outline" className="rounded-full group" asChild>
-            <a href={SOCIAL.behance} target="_blank" rel="noopener noreferrer">
-              Ver Portfólio Completo no Behance
+            <a href={CYNO.hubLink} target="_blank" rel="noopener noreferrer">
+              Ver templates no hub da Cyno
               <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
             </a>
           </Button>
